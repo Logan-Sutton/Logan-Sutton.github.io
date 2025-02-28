@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Number Boxes with Labels</title>
+  <style>
+    /* Full-page gradient background */
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Container holding the three boxes */
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Container for each label and number box */
+    .box-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Label styling */
+    .box-container label {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    
+    /* Styling for each number box */
+    .number-box {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Style for the input element within each box */
+    .number-box input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: transparent;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: inherit; /* Inherits text color from parent */
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- First box with "ph" label -->
+    <div class="box-container">
+      <label><em>PH Level</em></label>
+      <div class="number-box">
+        <input type="number" value="3">
+      </div>
+    </div>
+    <!-- Second box with "ammonium" label -->
+    <div class="box-container">
+      <label><em>Ammonia</em></label>
+      <div class="number-box">
+        <input type="number" value="7">
+      </div>
+    </div>
+    <!-- Third box with "nitrate" label -->
+    <div class="box-container">
+      <label><em>Nitrate</label</em></label>
+      <div class="number-box">
+        <input type="number" value="12">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to update the background color based on the input's value
+    function updateColor(input) {
+      const num = parseFloat(input.value);
+      if (!isNaN(num)) {
+        if (num < 5) {
+          input.parentElement.style.backgroundColor = '#28a745'; // green for < 5
+          input.style.color = '#fff';
+        } else if (num > 10) {
+          input.parentElement.style.backgroundColor = '#dc3545'; // red for > 10
+          input.style.color = '#fff';
+        } else {
+          input.parentElement.style.backgroundColor = '#ffc107'; // yellow for 5 to 10
+          input.style.color = '#000';
+        }
+      } else {
+        // Fallback for invalid input
+        input.parentElement.style.backgroundColor = '#fff';
+        input.style.color = '#000';
+      }
+    }
+
+    // Select all input fields within the number boxes and add event listeners
+    document.querySelectorAll('.number-box input').forEach(input => {
+      // Set the initial color based on the default value
+      updateColor(input);
+      // Update the color on every input change
+      input.addEventListener('input', () => {
+        updateColor(input);
+      });
+    });
+  </script>
+</body>
+</html>
+
+
