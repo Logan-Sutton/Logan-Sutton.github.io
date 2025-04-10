@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aquarium Monitor Project</title>
+  <title>Almaden Lake Water &amp; pH Monitor Project</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -30,15 +30,12 @@
       margin-bottom: 20px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    .project-section img {
+    .project-section img, .gallery-section img {
       width: 100%;
       height: auto;
       border-radius: 8px;
       margin-bottom: 15px;
-    }
-    .gallery-section h2 {
-      margin-bottom: 15px;
-      color: #0077cc;
+      display: block;
     }
     .gallery-container {
       display: flex;
@@ -46,11 +43,15 @@
       gap: 10px;
       justify-content: space-between;
     }
-    .gallery-container img {
+    .gallery-container a {
       flex: 1 1 calc(33% - 10px);
-      border-radius: 8px;
+      display: block;
+      text-decoration: none;
+    }
+    .gallery-container img {
       width: 100%;
       height: auto;
+      border-radius: 8px;
     }
     h2 {
       color: #0077cc;
@@ -66,46 +67,65 @@
 </head>
 <body>
   <header>
-    <h1>Aquarium Monitor</h1>
-    <p>Keeping your aquarium in check, one drop at a time.</p>
+    <h1>Almaden Lake Water &amp; pH Monitor</h1>
+    <p>Keeping Almaden Lake healthy and safe, one reading at a time.</p>
   </header>
   
   <div class="container">
+    <!-- What We Do Section -->
     <section class="project-section">
       <h2>What We Do</h2>
-      <!-- Image of a technology-infused aquarium monitor -->
-      <img src="https://source.unsplash.com/800x400/?aquarium,technology" alt="Aquarium Monitor">
-      <p>We built an automatic aquarium monitor that keeps an eye on your water level and pH using a microcontroller. All the details are shown on an LCD screen so you’ll know right away if the water level or pH gets too high or too low.</p>
-    </section>
-
-    <section class="project-section">
-      <h2>How It Works</h2>
-      <!-- Image showing a microcontroller setup -->
-      <img src="https://source.unsplash.com/800x400/?microcontroller,setup" alt="Microcontroller Setup">
-      <p>The monitor uses sensors connected to a microcontroller to keep track of your aquarium’s water conditions. When something’s off, the LCD screen alerts you immediately so you can make adjustments. It's a simple, smart solution to keep your fish happy and healthy.</p>
+      <!-- Picsum image using a seed for consistency -->
+      <img src="https://picsum.photos/seed/almadenlake/800/400" alt="Almaden Lake Monitor">
+      <p>
+        We built an automatic Almaden Lake water and pH monitoring system that tracks water quality and chemical balance using advanced sensors and microcontrollers. Real-time readings help ensure that Almaden Lake remains a safe and vibrant community resource.
+      </p>
     </section>
     
+    <!-- How It Works Section -->
+    <section class="project-section">
+      <h2>How It Works</h2>
+      <!-- Picsum image for sensor setup -->
+      <img src="https://picsum.photos/seed/sensors/800/400" alt="Sensor Setup">
+      <p>
+        The monitor gathers data from sensors placed at key locations around Almaden Lake. When water quality or pH values stray from safe ranges, the system alerts operators immediately. This automated solution helps maintain optimal lake conditions.
+      </p>
+    </section>
+    
+    <!-- Gallery Section -->
     <section class="gallery-section">
       <h2>Gallery</h2>
       <div class="gallery-container">
-        <!-- Image of fish in an aquarium -->
-        <img src="https://source.unsplash.com/300x200/?fish,aquarium" alt="Fish in Aquarium">
-        <!-- Image representing a water sensor -->
-        <img src="https://source.unsplash.com/300x200/?water,sensor" alt="Water Sensor">
-        <!-- Image representing an LCD display -->
-        <img src="https://source.unsplash.com/300x200/?lcd,display" alt="LCD Display">
-        <!-- Image of a microcontroller (like Arduino) -->
-        <img src="https://source.unsplash.com/300x200/?arduino,microcontroller" alt="Microcontroller">
-        <!-- Image showing an aquarium setup -->
-        <img src="https://source.unsplash.com/300x200/?aquarium,setup" alt="Aquarium Setup">
-        <!-- Image representing monitoring in action -->
-        <img src="https://source.unsplash.com/300x200/?technology,monitoring" alt="Monitoring In Action">
+        <!-- Almaden Lake Water View -->
+        <a href="https://picsum.photos/seed/almadenlakeview/800/400" target="_blank">
+          <img src="https://picsum.photos/seed/almadenlakeview/300/200" alt="Almaden Lake Water View">
+        </a>
+        <!-- pH Meter -->
+        <a href="https://picsum.photos/seed/phmeter/800/400" target="_blank">
+          <img src="https://picsum.photos/seed/phmeter/300/200" alt="pH Meter">
+        </a>
+        <!-- LCD Display -->
+        <a href="https://picsum.photos/seed/lcd/800/400" target="_blank">
+          <img src="https://picsum.photos/seed/lcd/300/200" alt="LCD Display">
+        </a>
+        <!-- Microcontroller -->
+        <a href="https://picsum.photos/seed/micro/800/400" target="_blank">
+          <img src="https://picsum.photos/seed/micro/300/200" alt="Microcontroller">
+        </a>
+        <!-- Lake Infrastructure -->
+        <a href="https://picsum.photos/seed/infrastructure/800/400" target="_blank">
+          <img src="https://picsum.photos/seed/infrastructure/300/200" alt="Lake Infrastructure">
+        </a>
+        <!-- Monitoring In Action -->
+        <a href="https://picsum.photos/seed/control/800/400" target="_blank">
+          <img src="https://picsum.photos/seed/control/300/200" alt="Monitoring In Action">
+        </a>
       </div>
     </section>
   </div>
   
   <footer>
-    <p>&copy; 2025 Aquarium Monitor Project. All rights reserved.</p>
+    <p>&copy; 2025 Almaden Lake Water &amp; pH Monitor Project. All rights reserved.</p>
   </footer>
 </body>
 </html>
